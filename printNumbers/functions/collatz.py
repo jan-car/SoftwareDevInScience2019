@@ -25,7 +25,7 @@ def CollatzSequence(n):
     :param n:   Operand
     :return:    fib(n) as list of fibonacci numbers, [0, 1, 1, 2, ... ]
     '''
-    sequence = [n]
+    sequence = [int(n)]
     while n != 1:
         if n % 2 == 0:
             n /= 2
