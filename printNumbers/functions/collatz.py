@@ -18,3 +18,19 @@
 #
 # You should have received a copy of the GNU General Public License
 # along with printNumbers.  If not, see <http://www.gnu.org/licenses/>.
+
+
+def CollatzSequence(n):
+    '''
+    :param n:   Operand
+    :return:    fib(n) as list of fibonacci numbers, [0, 1, 1, 2, ... ]
+    '''
+    sequence = [n]
+    while n != 1:
+        if n % 2 == 0:
+            n /= 2
+        else:
+            n = 3 * n + 1
+        sequence.append(n)
+
+    return sequence

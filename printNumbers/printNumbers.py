@@ -27,7 +27,7 @@
 """
 Usage:
   printNumbers.py -h --help
-  printNumbers.py [--fibonacci|--factorial] <operand>
+  printNumbers.py [--fibonacci|--factorial|--collatz] <operand>
 
 Options:
   -h --help       Print usage.
@@ -40,12 +40,14 @@ from docopt import docopt
 from parameters import *
 from functions.fibonacci import *
 from functions.factorial import *
+from functions.collatz import *
 
 #
 # FUNCTION TABLE
 #
 functionTable = { CONST_FUNC_CODE_FIBONACCI : FibonacciSequence,
                   CONST_FUNC_CODE_FACTORIAL : Factorial,
+                  CONST_FUNC_CODE_COLLATZ : CollatzSequence
                 }
 
 #
@@ -67,4 +69,6 @@ if __name__ == '__main__':
     if params.functionIndex == CONST_FUNC_CODE_FIBONACCI:
         print('fib(' + str(params.operand) + ') =', result)
     elif params.functionIndex == CONST_FUNC_CODE_FACTORIAL:
+        print(str(params.operand) + '! =', str(result))
+    elif params.functionIndex == CONST_FUNC_CODE_COLLATZ:
         print(str(params.operand) + '! =', str(result))
