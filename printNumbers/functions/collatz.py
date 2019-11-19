@@ -31,6 +31,6 @@ def CollatzSequence(n):
             n /= 2
         else:
             n = 3 * n + 1
-        sequence.append(n)
+        sequence.append(int(n))
 
     return sequence
