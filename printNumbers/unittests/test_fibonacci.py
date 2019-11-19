@@ -29,6 +29,7 @@ sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 import unittest
 from functions.fibonacci import *
 
+
 class TestFibonacci(unittest.TestCase):
 
     def test_value_1(self):
