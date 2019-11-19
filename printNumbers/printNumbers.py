@@ -71,4 +71,4 @@ if __name__ == '__main__':
     elif params.functionIndex == CONST_FUNC_CODE_FACTORIAL:
         print(str(params.operand) + '! =', str(result))
     elif params.functionIndex == CONST_FUNC_CODE_COLLATZ:
-        print(str(params.operand) + '! =', str(result))
+        print('Collatz(' + str(params.operand) + ') =', result)
